@@ -1,0 +1,82 @@
+
+table tbody{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+table tr td{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3e355f;
+    height: 3.8em;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 1.2em;
+}
+
+table tr td p{
+    cursor: pointer;
+}
+
+table tr td p.active{
+    text-decoration: line-through;
+    color: rgba(255, 255, 255, 0.733);
+}
+
+table tr td .action-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.line{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+hr{
+    width: 80%;
+    border-color: rgba(255, 255, 255, 0.53);
+}
+
+.table-control{
+    display: flex;
+    background-color: #3e355f;
+    height: 3em;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.table-control div{
+    display: flex;
+    gap: 10px;
+}
+
+.table-control button{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.537);
+}
+
+.table-control button.isActive{
+    color: cornflowerblue;
+}
+
+@media (max-width: 455px){
+
+    .table-control{
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
+    }
+
+}

@@ -1,0 +1,32 @@
+
+.main-container{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #19152a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.todo-content{
+    margin-top: 5em;
+    width: 35rem;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.todo-content h1{
+    text-align: center;
+}
+
+
+@media (max-width: 565px){
+
+    .todo-content{
+        width: 90%;
+    }
+
+}
