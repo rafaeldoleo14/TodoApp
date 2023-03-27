@@ -27,6 +27,11 @@ export const todoSlice = createSlice({
         },
 
         updateNote: (state, action: PayloadAction<updateAction>) => {
+
+            if(action.payload.note === ''){
+                return
+            }
+
             state.editTodo = action.payload;
             state.notes.filter(note => {
                 if (note.id === action.payload.id) {

@@ -30,6 +30,10 @@ export const AddTodo = () => {
       return Swal.fire('You should add a task', 'Try again', 'error')
     };
 
+    if(getTodo.length > 18){
+      return Swal.fire("there's too many characters", 'Try again', 'error')
+    }
+
     dispatch(addNote(
         {
           id: Math.round(Math.random()*10000), 
