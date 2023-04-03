@@ -24,16 +24,8 @@ export interface todoAction {
     done: boolean
 }
 
-export interface deleteAction {
-    id: number,
-}
+export type deleteAction = Pick<todoAction, 'id'>
 
-export interface updateAction {
-    id: number;
-    note: string,
-}
+export type updateAction = Pick<todoAction, 'id' | 'note'>
 
-export interface doneTodo {
-    id: number,
-    done: boolean;
-}
+export type doneTodo = Pick<todoAction, 'id' | 'done'>
