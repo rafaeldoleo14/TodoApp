@@ -1,27 +1,14 @@
 
-export interface todoState {
-    notes: {
-        id: number,
-        note: string,
-        done: boolean
-    }[],
-
-    completeNotes: {
-        id: number,
-        note: string,
-        done: boolean
-    }[],
-
-    editTodo: {
-        id: number,
-        note: string
-    }
-}
-
 export interface todoAction {
     id: number,
     note: string,
     done: boolean
+}
+
+export interface todoState {
+    notes: todoAction[],
+    completeNotes: todoAction[],
+    editTodo: Pick<todoAction, 'id' | 'note'>
 }
 
 export type deleteAction = Pick<todoAction, 'id'>
